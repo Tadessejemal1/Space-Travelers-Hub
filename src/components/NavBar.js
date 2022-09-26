@@ -1,31 +1,36 @@
-import { Link } from 'react-router-dom';
-import { FaUser } from 'react-icons/fa';
+import React from 'react';
+import { LinkContainer } from 'react-router-bootstrap';
+import {
+  Container, Navbar, Nav,
+} from 'react-bootstrap';
+
+import logo from '../assets/logo.png';
 
 const NavBar = () => (
-  <header>
-    <nav className="header__nav">
-      <div className="navbar">
-        <h1 className="logo">Bookstore CMS</h1>
-        <ul>
-          <li className="navMissions">
-            <Link to="/Missions">Missions</Link>
-          </li>
-          <li className="navRockets">
-            <Link to="/Profile">Rockets</Link>
-          </li>
-          <li className="navProfile">
-            <Link to="/Profile">
-              <FaUser />
-              Profile
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <div className="user">
-        <FaUser />
-      </div>
-    </nav>
-  </header>
+  <Navbar bg="light" expand="lg">
+    <Container>
+      <Navbar.Brand>
+        <Container className="head">
+          <img src={logo} alt="logo" />
+          <h1>Space Travelers&apos; Hub</h1>
+        </Container>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="nav-list">
+          <LinkContainer to="/">
+            <Nav.Link>Rockets</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/missions">
+            <Nav.Link>Missions</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/my-profile">
+            <Nav.Link>My Profile</Nav.Link>
+          </LinkContainer>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
 );
 
 export default NavBar;

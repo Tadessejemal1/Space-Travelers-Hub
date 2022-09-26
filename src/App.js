@@ -5,6 +5,7 @@ import Rockets from './components/Rockets/rockets';
 import Profile from './components/Profile/profile';
 import NavBar from './components/NavBar';
 import store from './redux/configureStore';
+import './App.css';
 
 const App = () => (
   <Provider store={store}>
