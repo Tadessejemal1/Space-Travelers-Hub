@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import Header from './Components/Header';
 import './App.css';
-import Mission from './Components/Mission/Mission';
+import Mission from './Components/Mission/mission';
 import Rocket from './Components/Rocket/rocket';
 import Profile from './Components/My-profile/profile';
 
