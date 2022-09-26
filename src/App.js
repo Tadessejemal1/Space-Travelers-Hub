@@ -1,22 +1,22 @@
-import React from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import Header from './Components/Header';
-import './App.css';
-import Mission from './Components/Mission/mission';
-import Rocket from './Components/Rocket/rocket';
-import Profile from './Components/My-profile/profile';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Missions from './components/Missions/missions';
+import Rockets from './components/Rockets/rockets';
+import Profile from './components/Profile/profile';
+import NavBar from './components/NavBar';
+import store from './redux/configureStore';
 
-function App() {
-  return (
-    <Router>
-      <Header />
+const App = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+      <NavBar />
       <Routes>
-        <Route exact path="/" element={<Rocket />} />
-        <Route exact path="/mission" element={<Mission />} />
-        <Route exact path="/profile" element={<Profile />} />
+        <Route path="/" element={<Missions />} />
+        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-    </Router>
-  );
-}
+    </BrowserRouter>
+  </Provider>
+);
 
 export default App;
