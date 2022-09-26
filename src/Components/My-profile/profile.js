@@ -1,9 +1,9 @@
 import React from 'react';
 
-const profile = () => (
+const Profile = () => (
   <div className="mission">
     <h1>profile</h1>
   </div>
 );
 
-export default profile;
+export default Profile;
