@@ -10,7 +10,7 @@
 .head {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 8px;
 }
 
 .nav-list {
@@ -18,4 +18,5 @@
   justify-content: flex-start;
   align-items: flex-end;
   list-style: none;
+  margin-left: 60%;
 }
