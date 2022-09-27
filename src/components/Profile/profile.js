@@ -1,7 +1,10 @@
+// import ProfileRocket from './profileRocket';
+import ProfileMission from './profileMissions';
+
 const Profile = () => (
-  <div className="profile">
-    <h1>Profile</h1>
-  </div>
+  <section className="profile">
+    <ProfileMission />
+  </section>
 );
 
 export default Profile;
