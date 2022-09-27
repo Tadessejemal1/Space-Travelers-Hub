@@ -30,3 +30,8 @@
 .profile__list-item:nth-of-type(odd) {
   background-color: #f2f2f2;
 }
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+}

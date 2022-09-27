@@ -1,9 +1,9 @@
 // import ProfileRocket from './profileRocket';
-import ProfileMission from './profileMissions';
+import ProfileDisplay from './profileDisplay';
 
 const Profile = () => (
   <section className="profile">
-    <ProfileMission />
+    <ProfileDisplay />
   </section>
 );
 
