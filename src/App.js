@@ -14,7 +14,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/my-profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   </Provider>
