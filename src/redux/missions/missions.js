@@ -1,73 +1,53 @@
 const JOIN_MISSION = 'space-travelers-hub/missions/JOIN_MISSION';
 const LEAVE_MISSION = 'space-travelers-hub/missions/LEAVE_MISSION';
 const GET_MISSIONS = 'space-travelers-hub/missions/GET_MISSIONS';
+const baseURL = 'https://api.spacexdata.com/v3/missions';
 
-const initialState = {
-  missions: [],
-};
+// initial state
+const initialState = [];
 
-export const joinMission = (mission) => ({
+// action creators
+export const joinMission = (payload) => ({
   type: JOIN_MISSION,
-  payload: mission,
+  payload,
 });
 
-export const leaveMission = (mission) => ({
+export const leaveMission = (payload) => ({
   type: LEAVE_MISSION,
-  payload: mission,
+  payload,
 });
 
-export const getMissions = (missions) => ({
+export const fetchMissions = (payload) => ({
   type: GET_MISSIONS,
-  payload: missions,
+  payload,
 });
 
-export const fetchMissions = () => async (dispatch) => {
-  await fetch('https://api.spacexdata.com/v3/missions')
+// thunk action functions
+export const fetchMissionsFromAPI = () => async (dispatch) => {
+  await fetch(`${baseURL}`)
     .then((response) => response.json())
-    .then((data) => {
-      const missions = data.map((mission) => ({
-        mission_id: mission.mission_id,
-        mission_name: mission.mission_name,
+    .then((MissionsList) => {
+      const arrangedList = MissionsList.map((mission) => ({
+        id: mission.mission_id,
+        name: mission.mission_name,
         description: mission.description,
         reserved: false,
       }));
-      dispatch(getMissions(missions));
+      if (arrangedList) {
+        dispatch(fetchMissions(arrangedList));
+      }
     });
 };
 
+// reducer
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_MISSIONS:
-      return {
-        ...state,
-        missions: action.payload,
-      };
     case JOIN_MISSION:
-      return {
-        ...state,
-        missions: state.missions.map((mission) => {
-          if (mission.mission_id === action.payload.mission_id) {
-            return {
-              ...mission,
-              reserved: true,
-            };
-          }
-          return mission;
-        }),
-      };
+      return [...state, action.payload];
     case LEAVE_MISSION:
-      return {
-        ...state,
-        missions: state.missions.map((mission) => {
-          if (mission.mission_id === action.payload.mission_id) {
-            return {
-              ...mission,
-              reserved: false,
-            };
-          }
-          return mission;
-        }),
-      };
+      return state.filter((mission) => mission.item_id !== action.payload);
+    case GET_MISSIONS:
+      return [...action.payload];
     default:
       return state;
   }

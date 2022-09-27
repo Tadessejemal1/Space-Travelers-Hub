@@ -1,21 +1,21 @@
-// import { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { v4 as uuidv4 } from 'uuid';
-import { useSelector } from 'react-redux';
-// import { fetchMissions } from '../../redux/missions/missions';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Mission from './mission';
+import { fetchMissions } from '../../redux/missions/missions';
+import './missions.css';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missionsReducer);
-  // const dispatch = useDispatch();
+  const missionList = useSelector((state) => state.missionsReducer);
 
-  /* useEffect(() => {
-    if (missions.length === 0) dispatch(fetchMissions());
-  }); */
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (missionList.length === 0) dispatch(fetchMissions());
+  });
 
   return (
     <section className="missions-container">
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Mission</th>
@@ -26,15 +26,16 @@ const Missions = () => {
         </thead>
         <tbody>
           {
-          missions.map((mission) => (
-            <Mission
-              key={mission.id}
-              id={mission.id}
-              name={mission.name}
-              description={mission.description}
-            />
-          ))
-        }
+            missionList.map((mission) => (
+              <Mission
+                key={mission.id}
+                id={mission.id}
+                name={mission.name}
+                description={mission.description}
+                reserved={mission.reserved}
+              />
+            ))
+          }
         </tbody>
       </table>
     </section>
