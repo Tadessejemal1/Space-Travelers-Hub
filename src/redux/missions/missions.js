@@ -7,14 +7,14 @@ const baseURL = 'https://api.spacexdata.com/v3/missions';
 const initialState = [];
 
 // action creators
-export const joinMission = (payload) => ({
+export const joinMission = (id) => ({
   type: JOIN_MISSION,
-  payload,
+  id,
 });
 
-export const leaveMission = (payload) => ({
+export const leaveMission = (id) => ({
   type: LEAVE_MISSION,
-  payload,
+  id,
 });
 
 export const fetchMissions = (payload) => ({
@@ -38,14 +38,57 @@ export const fetchMissionsFromAPI = () => async (dispatch) => {
       }
     });
 };
+// actions
+/* export const joinMissionAction = (missions, id) => {
+  const newState = missions.map((mission) => {
+    if (mission.mission_id !== id) {
+      return mission;
+    }
+    return { ...mission, reserved: true };
+  });
+  return newState;
+};
+
+export const leaveMissionAction = (missions, id) => {
+  const newState = missions.map((mission) => {
+    if (mission.mission_id !== id) {
+      return mission;
+    }
+    return { ...mission, reserved: false };
+  });
+  return newState;
+}; */
 
 // reducer
-const missionsReducer = (state = initialState, action) => {
+/* const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case JOIN_MISSION:
-      return [...state, action.payload];
+      return joinMissionAction(state, action.payload);
     case LEAVE_MISSION:
-      return state.filter((mission) => mission.item_id !== action.payload);
+      return leaveMissionAction(state, action.payload);
+    case GET_MISSIONS:
+      return [...action.payload];
+    default:
+      return state;
+  }
+}; */
+
+const missionsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case JOIN_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.id !== action.id) return mission;
+        return { ...mission, reserved: true };
+      });
+      return [...newState];
+    }
+    case LEAVE_MISSION: {
+      const newState = state.map((mission) => {
+        if (mission.id !== action.id) return mission;
+        return { ...mission, reserved: false };
+      });
+      return [...newState];
+    }
     case GET_MISSIONS:
       return [...action.payload];
     default:
