@@ -1,7 +1,11 @@
-import { createReducer, createAction, createAsyncThunk } from '@reduxjs/toolkit';
+import {
+  createAction, createReducer, createAsyncThunk,
+} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const rocketsFetched = createAction('rocketsFetched');
+export const reserveRocket = createAction('rockets/rocketReserved');
+export const cancelRocketReservation = createAction('rockets/rocketReservationCanceled');
 
 export const fetchRockets = createAsyncThunk(
   'rockets/fetchRockets',
@@ -29,6 +33,14 @@ const rocketsReducer = createReducer([], {
   [rocketsFetched.type]: (rockets, action) => {
     rockets.push(...action.payload);
   },
+  [reserveRocket.type]: (rockets, action) => rockets.map((rocket) => {
+    if (rocket.id === action.payload) return { ...rocket, reserved: true };
+    return rocket;
+  }),
+  [cancelRocketReservation.type]: (rockets, action) => rockets.map((rocket) => {
+    if (rocket.id === action.payload) return { ...rocket, reserved: false };
+    return rocket;
+  }),
 });
 
 export default rocketsReducer;
