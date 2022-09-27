@@ -1,20 +1,34 @@
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
 import './mission.css';
+import { joinMission, leaveMission } from '../../redux/missions/missions';
 
 const Mission = (props) => {
   const {
     id, name, description, reserved,
   } = props;
+  const dispatch = useDispatch();
+
   return (
-    <tr className="mission" id={id}>
-      <td>{name}</td>
-      <td>{description}</td>
-      <td className="member">{reserved ? 'Active Member' : 'NOT A MEMBER'}</td>
-      <td>
-        <button type="button" className="reserve-btn">
-          {reserved ? 'Leave Mission' : 'Join Mission'}
+    <tr className="mission-row">
+      <th className="mission-name">{name}</th>
+      <th className="mission-description">{description}</th>
+      <th className="mission-status">{reserved ? (<span className="active">Active Member</span>) : (<span className="noactive">NOT A MEMBER</span>)}</th>
+      <th className="mission-button">
+        <button
+          type="button"
+          className={reserved ? 'leave-button' : 'join-button'}
+          onClick={() => {
+            if (reserved) {
+              dispatch(leaveMission(id));
+            } else {
+              dispatch(joinMission(id));
+            }
+          }}
+        >
+          {reserved ? (<span className="leave">Leave Mission</span>) : (<span className="join">Join Mission</span>)}
         </button>
-      </td>
+      </th>
     </tr>
   );
 };
