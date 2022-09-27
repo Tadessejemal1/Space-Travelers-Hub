@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Missions from './components/Missions/missions';
-import Rockets from './components/Rockets/rockets';
+import RocketContainer from './components/Rockets/rocketContainer';
 import Profile from './components/Profile/profile';
 import NavBar from './components/NavBar';
 import store from './redux/configureStore';
@@ -12,7 +12,7 @@ const App = () => (
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Rockets />} />
+        <Route path="/" element={<RocketContainer />} />
         <Route path="/missions" element={<Missions />} />
         <Route path="/my-profile" element={<Profile />} />
       </Routes>
