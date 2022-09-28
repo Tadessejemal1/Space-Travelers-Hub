@@ -24,7 +24,7 @@ const Missions = () => {
             <th>Content</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="missions">
           {
             missionList.map((mission) => (
               <Mission

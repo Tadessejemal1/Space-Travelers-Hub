@@ -9,6 +9,11 @@
   border-collapse: collapse;
 }
 
+.missions-container {
+ margin-left: 2rem;
+ margin-right: 2rem;
+}
+
 tbody > :nth-child(2n) {
   background-color: rgba(196, 196, 196, 0.349);
 }
