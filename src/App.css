@@ -49,7 +49,6 @@
   .rocket-card {
     display: flex;
     flex-direction: column;
-    margin-top:40x;
     justify-items: center;
     align-items: center;
     text-align: center;
