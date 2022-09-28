@@ -1,35 +1,42 @@
-import { LinkContainer } from 'react-router-bootstrap';
-import {
-  Container, Navbar, Nav,
-} from 'react-bootstrap';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 import logo from '../assets/logo.png';
 
-const NavBar = () => (
-  <Navbar bg="light" expand="lg" className="mb-2">
-    <Container>
-      <Navbar.Brand>
-        <Container className="head">
-          <img src={logo} alt="logo" />
-          <h1>Space Travelers&apos; Hub</h1>
-        </Container>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="nav-list">
-          <LinkContainer to="/">
-            <Nav.Link>Rockets</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/missions">
-            <Nav.Link>Missions</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/my-profile">
-            <Nav.Link>My Profile</Nav.Link>
-          </LinkContainer>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-);
+const NavBar = () => {
+  const links = [
+    { id: 1, name: 'Rockets', path: '/' },
+    { id: 2, name: 'Missions', path: '/missions' },
+    { id: 3, name: 'My Profile', path: '/my-profile' },
+  ];
+
+  return (
+    <nav>
+      <div className="logo">
+        <div className="logo-img">
+          <img
+            src={logo}
+            alt="logo"
+            style={{ width: '100px', height: '100px' }}
+            className="logo-img"
+          />
+        </div>
+        <span className="logo-title">Space Travelers&apos; Hub</span>
+      </div>
+      <div className="hamburger">
+        <div className="line1" />
+        <div className="line2" />
+        <div className="line3" />
+      </div>
+      <ul className="nav-links">
+        {links.map((link) => (
+          <li key={link.id}>
+            <Link to={link.path}>{link.name}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
 export default NavBar;
