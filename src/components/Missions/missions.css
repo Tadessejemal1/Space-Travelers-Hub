@@ -10,8 +10,8 @@
 }
 
 .missions-container {
- margin-left: 2rem;
- margin-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 tbody > :nth-child(2n) {
