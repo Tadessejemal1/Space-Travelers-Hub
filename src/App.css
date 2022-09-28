@@ -21,3 +21,51 @@
   list-style: none;
   margin-left: 50%;
 }
+
+.rockets {
+  width: 80%;
+  margin: 3%;
+}
+
+.rocket-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+
+.rocket-img {
+  width: 40%;
+  border-radius: 5px;
+}
+
+.rocket-body {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .rocket-card {
+    display: flex;
+    flex-direction: column;
+    margin-top:40x;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .rocket-img {
+    display: block;
+    margin: auto;
+    width: 85%;
+  }
+
+  .rocket-body {
+    row-gap: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
