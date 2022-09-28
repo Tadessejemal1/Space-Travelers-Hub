@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import store from '../../redux/configureStore';
-import Profile from '../profile/Profile';
+import Profile from '../Profile/profile';
 
 const MockMyProfileComponent = () => (
   <Provider store={store}>
