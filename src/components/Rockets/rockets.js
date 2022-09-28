@@ -8,7 +8,7 @@ import { reserveRocket, cancelRocketReservation } from '../../redux/Rockets/rock
 
 const Rocket = ({ rocket }) => {
   const dispatch = useDispatch();
-  const rockets = useSelector((state) => state);
+  const rockets = useSelector((state) => state.Rockets);
   const {
     id, rocketName, description, rocketImage, reserved,
   } = rocket;
@@ -28,7 +28,7 @@ const Rocket = ({ rocket }) => {
           <Card.Img
             src={rocketImage}
             alt="rocket"
-            height="auto"
+            height="250px"
           />
         </Col>
         <Col>
