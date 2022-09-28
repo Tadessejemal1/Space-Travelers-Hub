@@ -1,6 +1,6 @@
 nav {
-  height: 7rem;
-  width: 98vw;
+  height: 5rem;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -21,7 +21,7 @@ nav {
   letter-spacing: normal;
   color: #0290ff;
   text-align: center;
-  margin-left: 7.3vw;
+  margin-left: 2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -41,11 +41,11 @@ nav {
   display: flex;
   list-style: none;
   margin-left: auto;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   text-transform: uppercase;
   gap: 1rem;
-  margin-right: 5.9rem;
+  margin-right: 2rem;
 }
 
 .nav-links li a {
