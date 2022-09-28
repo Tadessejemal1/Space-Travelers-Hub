@@ -1,11 +1,21 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { cleanup } from '@testing-library/react';
-import Profile from '../../components/Profile/profile';
+import { Provider } from 'react-redux';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import store from '../../redux/configureStore';
+import Profile from '../../components/profile/Profile';
 
-afterEach(() => cleanup());
+const MockMyProfileComponent = () => (
+  <Provider store={store}>
+    <Profile />
+  </Provider>
+);
 
-it('Profile Renders Correctly', () => {
-  const tree = renderer.create(<Profile />).toJSON();
-  expect(tree).toMatchSnapshot();
+describe('My profile component', () => {
+  it('renders without crashing', () => {
+    render(<MockMyProfileComponent />);
+    const missionsHeaderText = screen.getByText(/My Missions/i);
+    const rocketHeaderText = screen.getByText(/My Rockets/i);
+    expect(missionsHeaderText).toBeInTheDocument();
+    expect(rocketHeaderText).toBeInTheDocument();
+  });
 });
