@@ -17,13 +17,13 @@ const NavBar = () => {
           <img
             src={logo}
             alt="logo"
-            style={{ width: '100px', height: '100px' }}
+            style={{ width: '70px', height: '70px' }}
             className="logo-img"
           />
         </div>
         <span className="logo-title">Space Travelers&apos; Hub</span>
       </div>
-      <div className="hamburger">
+      <div type="button" className="hamburger">
         <div className="line1" />
         <div className="line2" />
         <div className="line3" />

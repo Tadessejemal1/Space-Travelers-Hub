@@ -14,7 +14,7 @@ const RocketContainer = () => {
   return (
     <div className="rockets">
       <ul>
-        { rockets.map((rocket) => (<Rockets key={rocket.index} rocket={rocket} />)) }
+        { rockets.map((rocket) => (<Rockets key={rocket.id} rocket={rocket} />)) }
       </ul>
     </div>
   );
