@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-https://lokurasrlz.github.io/Space-Travelers
+[click me](https://lokurasrlz.github.io/Space-Travelers)
 
 ## Getting Started
 
