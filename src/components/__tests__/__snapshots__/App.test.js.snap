@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Renders Correctly 1`] = `
+Array [
+  <nav>
+    <div
+      className="logo"
+    >
+      <div
+        className="logo-img"
+      >
+        <img
+          alt="logo"
+          className="logo-img"
+          src="logo.png"
+          style={
+            Object {
+              "height": "70px",
+              "width": "70px",
+            }
+          }
+        />
+      </div>
+      <span
+        className="logo-title"
+      >
+        Space Travelers' Hub
+      </span>
+    </div>
+    <div
+      className="hamburger"
+      type="button"
+    >
+      <div
+        className="line1"
+      />
+      <div
+        className="line2"
+      />
+      <div
+        className="line3"
+      />
+    </div>
+    <ul
+      className="nav-links"
+    >
+      <li>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li>
+        <a
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li>
+        <a
+          href="/my-profile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <div
+    className="rockets"
+  >
+    <ul />
+  </div>,
+]
+`;
