@@ -7,8 +7,10 @@ const RocketContainer = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.Rockets);
   useEffect(() => {
-    if (rockets.length === 0) dispatch(fetchRockets());
-  });
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
+  }, []);
   return (
     <div className="rockets">
       <ul>

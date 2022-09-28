@@ -13,10 +13,18 @@
 }
 
 .profile__list {
-  width: 100%;
+  width: 90%;
   font-size: 1.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.profile__lists {
+  width: 300%;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left:-32px;
 }
 
 .profile__list-item {

@@ -28,7 +28,7 @@ const Rocket = ({ rocket }) => {
           <Card.Img
             src={rocketImage}
             alt="rocket"
-            height="auto"
+            height="250px"
           />
         </Col>
         <Col>

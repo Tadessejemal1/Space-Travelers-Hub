@@ -6,7 +6,7 @@ import {
 import logo from '../assets/logo.png';
 
 const NavBar = () => (
-  <Navbar bg="light" expand="lg" className="mb-2 h-25">
+  <Navbar bg="light" expand="lg" className="mb-2">
     <Container>
       <Navbar.Brand>
         <Container className="head">

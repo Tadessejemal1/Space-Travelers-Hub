@@ -27,7 +27,7 @@ const ProfileDisplay = () => {
       </div>
       <div className="profile-rockets">
         <h2>My Rockets</h2>
-        <ul className="profile__list">
+        <ul className="profile__lists">
           {
           arrJoinedRockets.length > 0
             ? arrJoinedRockets.map((rocket) => <li key={rocket.id} className="profile__list-item">{rocket.rocketName}</li>)
