@@ -8,7 +8,7 @@ import { reserveRocket, cancelRocketReservation } from '../../redux/Rockets/rock
 
 const Rocket = ({ rocket }) => {
   const dispatch = useDispatch();
-  const rockets = useSelector((state) => state);
+  const rockets = useSelector((state) => state.Rockets);
   const {
     id, rocketName, description, rocketImage, reserved,
   } = rocket;
