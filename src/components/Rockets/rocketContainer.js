@@ -10,7 +10,7 @@ const RocketContainer = () => {
     if (rockets.length === 0) {
       dispatch(fetchRockets());
     }
-  }, []);
+  }, [rockets, dispatch]);
   return (
     <div className="rockets">
       <ul>
