@@ -6,6 +6,15 @@
 # Description
 
 >  A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. Using real live data from the SpaceX API.
+# ScreenShot
+# rocket
+![Screenshot (177)](https://user-images.githubusercontent.com/85793292/193104511-83c083ed-166d-485e-866c-194824eaee0c.png)
+# mission
+![Screenshot (176)](https://user-images.githubusercontent.com/85793292/193104730-ea577f23-191d-4ea6-8b0f-995bf5381bae.png)
+# profile
+![image](https://user-images.githubusercontent.com/85793292/193104824-a6f363ff-1c5f-4f3e-b887-01ad1cbcd811.png)
+# mobile version 
+![image](https://user-images.githubusercontent.com/85793292/193104963-427df205-64fd-4431-b8cc-fbff21e22ec7.png)
 
 ## Built With
 
