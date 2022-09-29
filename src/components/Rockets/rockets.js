@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {
   Badge, Card, Button,
 } from 'react-bootstrap';
@@ -8,17 +8,14 @@ import { reserveRocket, cancelRocketReservation } from '../../redux/Rockets/rock
 
 const Rocket = ({ rocket }) => {
   const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.Rockets);
   const {
     id, rocketName, description, rocketImage, reserved,
   } = rocket;
-  const handleReserve = (e) => {
+  const handleReserve = () => {
     if (!reserved) {
-      dispatch(reserveRocket(+e.target.id));
-      console.log('reserved...', rockets);
+      dispatch(reserveRocket(rocket.id));
     } else {
-      dispatch(cancelRocketReservation(+e.target.id));
-      console.log('cancel reservation...', rockets);
+      dispatch(cancelRocketReservation(rocket.id));
     }
   };
   return (
@@ -45,7 +42,7 @@ Rocket.propTypes = {
     id: PropTypes.number.isRequired,
     rocketName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    rocketImage: PropTypes.string.isRequired,
+    rocketImage: PropTypes.arrayOf(PropTypes.string),
     reserved: PropTypes.bool,
   }).isRequired,
 };
