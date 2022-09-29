@@ -5,13 +5,20 @@
 
 # Description
 
-> A simple website containing a list of books that can be modified through adding or removing a book
+>  A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. Using real live data from the SpaceX API.
 
 ## Built With
 
 - HTML
-- JavaScript
+- JS
 - CSS
+- JSX
+- ReactJS
+- Redux
+
+## Live Demo
+
+[click me](https://lokurasrlz.github.io/Space-Travelers)
 
 ## Getting Started
 
@@ -23,16 +30,23 @@ To get a local copy up and running follow these simple example steps.
  - IDE(code editor) like: **Vscode**, **Sublime**, etc.  
  - [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
 
-### Setup
-  1. Download the **Zip** file or clone the repo with: ```bash git clone [https://github.com/Tadessejemal1/.git-  https://github.com/Tadessejemal1/.git/)
-  2.  ``` To access cloned directory run: ```bash cd/Single-page-website ``` 
-  3. Open it with the live server or just  open the "index.html" file with any browser
 
-### Usage
-  - First you would find the list of books in the "List" section empty.
-  - To add a book to the list .. navigate to the "Add new" section & add the "title"   and the "author", then click Add.
-  - To remove a book from the list click teh remove button displayed next to the book in the "List" section.
+### To launch the project locally:
 
+#### Step 1:
+- Clone this repo locally using git and the following git command
+
+  git clone https://github.com/USERNAME/REPOSITORY
+
+#### Step 2:
+
+- `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 ## Authors
 
 👤 **Author1**
@@ -47,8 +61,8 @@ To get a local copy up and running follow these simple example steps.
 
 ## 👤 Matias Aguirre
 
-- GitHub: [@](https://github.com/)
-- Twitter: [@](https://twitter.com/)
+- GitHub: [@](https://github.com/LokurasRlz)
+
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/)
 
 ## 🤝 Contributing

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Renders Correctly 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand-lg navbar-light bg-light"
+  >
+    <div
+      className="nav"
+    >
+      <span
+        className="navbar-brand"
+      >
+        <div
+          className="head container"
+        >
+          <img
+            alt="logo"
+            src="logo.png"
+          />
+          <h1>
+            Space Travelers' Hub
+          </h1>
+        </div>
+      </span>
+      <button
+        aria-label="Toggle navigation"
+        className="navbar-toggler collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        aria-expanded={null}
+        className="navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          className="nav-list"
+        >
+          <a
+            className="active nav-link"
+            disabled={false}
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Rockets
+          </a>
+          <a
+            className="nav-link"
+            disabled={false}
+            href="/missions"
+            onClick={[Function]}
+            style={null}
+          >
+            Missions
+          </a>
+          <a
+            className="nav-link"
+            disabled={false}
+            href="/my-profile"
+            onClick={[Function]}
+            style={null}
+          >
+            My Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>,
+  <div
+    className="rockets"
+  >
+    <ul />
+  </div>,
+]
+`;

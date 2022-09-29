@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.profile-missions {
+  width: 50%;
+}
+
+.profile-missions h2 {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.profile__list {
+  width: 70%;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile__lists {
+  width: 340%;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: -32px;
+  margin-right: 2rem;
+}
+
+.profile__list-item {
+  width: auto;
+  border: 1px solid #7e7e7e;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1px;
+}
+
+.profile__list-item:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 760px) {
+  .profile-missions {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .profile-missions h2 {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
+  .profile-rockets {
+    margin-left: 2rem;
+  }
+
+  .profile__list {
+    width: 90%;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .profile__lists {
+    width: 95%;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: -32px;
+  }
+
+  .profile__list-item {
+    width: auto;
+    border: 1px solid #7e7e7e;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1px;
+  }
+
+  .profile__list-item:nth-of-type(odd) {
+    background-color: #f2f2f2;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
