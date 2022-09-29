@@ -2,73 +2,75 @@
 
 exports[`App Renders Correctly 1`] = `
 Array [
-  <nav>
+  <nav
+    className="navbar navbar-expand-lg navbar-light bg-light"
+  >
     <div
-      className="logo"
+      className="nav"
     >
-      <div
-        className="logo-img"
-      >
-        <img
-          alt="logo"
-          className="logo-img"
-          src="logo.png"
-          style={
-            Object {
-              "height": "70px",
-              "width": "70px",
-            }
-          }
-        />
-      </div>
       <span
-        className="logo-title"
+        className="navbar-brand"
       >
-        Space Travelers' Hub
+        <div
+          className="head container"
+        >
+          <img
+            alt="logo"
+            src="logo.png"
+          />
+          <h1>
+            Space Travelers' Hub
+          </h1>
+        </div>
       </span>
+      <button
+        aria-label="Toggle navigation"
+        className="navbar-toggler collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        aria-expanded={null}
+        className="navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          className="nav-list"
+        >
+          <a
+            className="active nav-link"
+            disabled={false}
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Rockets
+          </a>
+          <a
+            className="nav-link"
+            disabled={false}
+            href="/missions"
+            onClick={[Function]}
+            style={null}
+          >
+            Missions
+          </a>
+          <a
+            className="nav-link"
+            disabled={false}
+            href="/my-profile"
+            onClick={[Function]}
+            style={null}
+          >
+            My Profile
+          </a>
+        </div>
+      </div>
     </div>
-    <div
-      className="hamburger"
-      type="button"
-    >
-      <div
-        className="line1"
-      />
-      <div
-        className="line2"
-      />
-      <div
-        className="line3"
-      />
-    </div>
-    <ul
-      className="nav-links"
-    >
-      <li>
-        <a
-          href="/"
-          onClick={[Function]}
-        >
-          Rockets
-        </a>
-      </li>
-      <li>
-        <a
-          href="/missions"
-          onClick={[Function]}
-        >
-          Missions
-        </a>
-      </li>
-      <li>
-        <a
-          href="/my-profile"
-          onClick={[Function]}
-        >
-          My Profile
-        </a>
-      </li>
-    </ul>
   </nav>,
   <div
     className="rockets"
