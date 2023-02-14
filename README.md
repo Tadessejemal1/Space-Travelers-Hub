@@ -27,7 +27,7 @@
 
 ## Live Demo
 
-[click me](https://lokurasrlz.github.io/Space-Travelers)
+[click me](https://dev--frabjous-biscotti-e42308.netlify.app/)
 
 ## Getting Started
 
